@@ -2,7 +2,7 @@
   "extends": ["@commitlint/config-conventional"],
   "parserPreset": {
     "parserOpts": {
-      "issuePrefixes": ["MED"]
+      "issuePrefixes": ["MED-"]
     }
   },
   "rules": {}
