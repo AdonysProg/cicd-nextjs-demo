@@ -1,10 +1,10 @@
 name: CI
 on: [push]
-jobs: 
+jobs:
   eslint:
     name: Lint Code base
-    runs-on: ubuntu-latest 
-    steps: 
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
