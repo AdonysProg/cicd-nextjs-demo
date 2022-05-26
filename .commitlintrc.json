@@ -5,5 +5,7 @@
       "issuePrefixes": ["MED-"]
     }
   },
-  "rules": {}
+  "rules": {
+    "references-empty": [2, "never"]
+  }
 }

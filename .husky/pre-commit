@@ -15,13 +15,8 @@ yarn check-types || (
     exit 1
 )
 
+## Checking formatting
 yarn check-format || (
     echo 'TypeScript formatting check failed.'
-    exit 1
-)
-
-yarn check-all ||
-(
-    echo 'TypeScript check failed.'
     exit 1
 )
