@@ -20,3 +20,8 @@ yarn check-format || (
     echo 'TypeScript formatting check failed.'
     exit 1
 )
+
+yarn build || (
+    echo 'Build failed.'
+    exit 1
+)
