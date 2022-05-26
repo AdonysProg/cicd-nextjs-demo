@@ -12,7 +12,7 @@ jobs:
         run: yarn install
 
       - name: Format code
-        run: yarn format:fix
+        run: yarn check-format
 
       - name: Run ESLint
         run: yarn lint
