@@ -3,6 +3,12 @@
 
 echo 'Running pre-commit hook...'
 
+## Check for uncommitted changes
+yarn check-lint || (
+    echo 'TypeScript lint check failed.'
+    exit 1
+)
+
 ## Check tsconfing standards
 yarn check-types || (
     echo 'TypeScript check failed.'
@@ -11,11 +17,6 @@ yarn check-types || (
 
 yarn check-format || (
     echo 'TypeScript formatting check failed.'
-    exit 1
-)
-
-yarn check-lint || (
-    echo 'TypeScript lint check failed.'
     exit 1
 )
 
