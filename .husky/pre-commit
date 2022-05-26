@@ -9,3 +9,18 @@ yarn check-types || (
     exit 1
 )
 
+yarn check-format || (
+    echo 'TypeScript formatting check failed.'
+    exit 1
+)
+
+yarn check-lint || (
+    echo 'TypeScript lint check failed.'
+    exit 1
+)
+
+yarn check-all ||
+(
+    echo 'TypeScript check failed.'
+    exit 1
+)
