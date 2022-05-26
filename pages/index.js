@@ -9,4 +9,3 @@ export default function Home() {
     </div>
   )
 }
-// 7A41-C2EC
