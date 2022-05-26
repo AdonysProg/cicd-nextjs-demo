@@ -11,7 +11,7 @@ jobs:
       - name: Install packages
         run: yarn install
 
-      - name: Format code 
+      - name: Format code
         run: yarn format:fix
 
       - name: Run ESLint
