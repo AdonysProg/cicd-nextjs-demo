@@ -3,9 +3,11 @@
 
 echo 'Running pre-commit hook...'
 
-## Check for uncommitted changes
-yarn check-lint || (
-    echo 'TypeScript lint check failed.'
+yarn lint-staged
+
+## Checking formatting
+yarn check-format || (
+    echo 'Prettier formatting check failed.'
     exit 1
 )
 
@@ -15,13 +17,13 @@ yarn check-types || (
     exit 1
 )
 
-## Checking formatting
-yarn check-format || (
-    echo 'TypeScript formatting check failed.'
+yarn build || (
+    echo 'Build failed.'
     exit 1
 )
 
-yarn build || (
-    echo 'Build failed.'
+## Check for uncommitted changes
+yarn check-lint || (
+    echo 'TypeScript lint check failed.'
     exit 1
 )
