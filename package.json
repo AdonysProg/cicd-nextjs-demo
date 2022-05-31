@@ -14,7 +14,10 @@
     "check-all": "yarn check-types && yarn check-format && yarn check-lint && yarn build"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": ["yarn eslint","prettier --write --ignore-path .gitignore ."]
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn eslint",
+      "prettier --write --ignore-path .gitignore ."
+    ]
   },
   "dependencies": {
     "next": "12.1.6",
