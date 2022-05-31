@@ -3,6 +3,8 @@
 
 echo 'Running pre-commit hook...'
 
+yarn lint-staged
+
 ## Checking formatting
 yarn check-format || (
     echo 'Prettier formatting check failed.'
