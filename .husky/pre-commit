@@ -3,15 +3,15 @@
 
 echo 'Running pre-commit hook...'
 
-## Check tsconfing standards
-yarn check-types || (
-    echo 'TypeScript check failed.'
-    exit 1
-)
-
 ## Checking formatting
 yarn check-format || (
     echo 'Prettier formatting check failed.'
+    exit 1
+)
+
+## Check tsconfing standards
+yarn check-types || (
+    echo 'TypeScript check failed.'
     exit 1
 )
 
